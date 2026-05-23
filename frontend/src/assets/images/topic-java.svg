@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img" aria-label="Java programming topic">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#0f766e"/>
+      <stop offset="1" stop-color="#38bdf8"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#g)"/>
+  <circle cx="520" cy="84" r="74" fill="#ffffff" opacity=".18"/>
+  <rect x="84" y="88" width="340" height="184" rx="18" fill="#ffffff" opacity=".9"/>
+  <path d="M132 146h136M132 184h238M132 222h174" stroke="#0f172a" stroke-width="18" stroke-linecap="round" opacity=".72"/>
+  <path d="M456 160c40 0 58 18 58 46 0 34-28 54-72 54h-44" fill="none" stroke="#ffffff" stroke-width="22" stroke-linecap="round"/>
+</svg>

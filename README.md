@@ -56,6 +56,7 @@ http://localhost:8081
 ```
 
 Detailed endpoint documentation is available in `docs/api-endpoints.md`.
+Database model documentation is available in `docs/database-models.md`.
 
 Key endpoints include:
 

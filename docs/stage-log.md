@@ -14,3 +14,8 @@
 - Documented backend requirements, environment variables, run command, and test command.
 - Confirmed backend uses environment variables for database, JWT, and AI provider configuration.
 
+## Stage 3: Database Models Added
+
+- Verified JPA entities for users, courses, topics, quiz questions, scores, saved topics, completed topics, notes, progress, and chat history.
+- Verified Spring Data JPA repositories for model persistence and service-layer queries.
+- Added database model documentation with ERD, table responsibilities, constraints, defaults, and repository coverage.

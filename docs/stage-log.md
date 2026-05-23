@@ -19,3 +19,10 @@
 - Verified JPA entities for users, courses, topics, quiz questions, scores, saved topics, completed topics, notes, progress, and chat history.
 - Verified Spring Data JPA repositories for model persistence and service-layer queries.
 - Added database model documentation with ERD, table responsibilities, constraints, defaults, and repository coverage.
+
+## Stage 4: JWT Authentication Implemented
+
+- Verified JWT generation, validation, bearer-token filtering, BCrypt password hashing, and role-based route protection.
+- Verified frontend token storage and protected route handling for student and admin scopes.
+- Hardened JWT filtering so malformed or expired bearer tokens are treated as unauthenticated requests.
+- Added authentication documentation with request examples, protected route rules, and environment variables.

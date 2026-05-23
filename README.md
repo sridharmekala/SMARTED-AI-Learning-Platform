@@ -87,6 +87,18 @@ cd backend
 mvn spring-boot:run
 ```
 
+Verify the backend:
+
+```text
+http://localhost:8081/health
+```
+
+Expected response:
+
+```text
+OK
+```
+
 By default, the backend uses the values from `backend/src/main/resources/application.properties`. For local secrets, set environment variables instead of editing secrets into source code:
 
 ```bash
@@ -96,6 +108,8 @@ DB_PASSWORD=your-password
 JWT_SECRET=your-long-random-secret
 NVIDIA_API_KEY=your-api-key
 ```
+
+More backend setup details are available in `docs/backend-setup.md`.
 
 ### Frontend Setup
 
@@ -139,4 +153,3 @@ Required stage commit examples:
 - More analytics for student performance
 - GitHub Projects board and issue templates
 - Release tags for major milestones
-

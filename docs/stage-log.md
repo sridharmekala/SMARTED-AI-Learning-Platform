@@ -26,3 +26,9 @@
 - Verified frontend token storage and protected route handling for student and admin scopes.
 - Hardened JWT filtering so malformed or expired bearer tokens are treated as unauthenticated requests.
 - Added authentication documentation with request examples, protected route rules, and environment variables.
+
+## Stage 5: Learning Module Added
+
+- Verified course, topic, topic completion, recommendation, saved-topic, note, and daily-plan learning flows.
+- Documented backend controllers/services, frontend pages/services, student flow, endpoints, and progress rules.
+- Confirmed topic completion updates `user_topic_progress` and feeds progress percentage, dashboard, and daily plan data.

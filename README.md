@@ -75,6 +75,7 @@ Documentation index:
 - Profile and certificates: `docs/profile-certificates.md`
 - Screenshots: `docs/screenshots.md`
 - Final QA: `docs/final-qa.md`
+- Deployment: `docs/deployment.md`
 
 Key endpoints include:
 
@@ -125,6 +126,7 @@ DB_URL=jdbc:mysql://localhost:3306/smarted_db?createDatabaseIfNotExist=true
 DB_USERNAME=root
 DB_PASSWORD=your-password
 JWT_SECRET=your-long-random-secret
+CORS_ALLOWED_ORIGIN_PATTERNS=http://localhost:*,http://127.0.0.1:*
 NVIDIA_API_KEY=your-api-key
 ```
 

@@ -85,3 +85,10 @@
 - Updated README screenshots to render preview images directly on GitHub.
 - Added a compact documentation index and screenshot notes.
 - Added screenshot documentation with capture notes and future protected-page screenshot follow-ups.
+
+## Stage 14: Deployment Preparation
+
+- Added deployment documentation for split frontend/backend hosting.
+- Added backend Java runtime metadata for Java 21 hosting.
+- Updated backend port and CORS configuration to use deployment environment variables.
+- Added Vercel SPA rewrite configuration for frontend routes.

@@ -107,3 +107,9 @@
 - Added pull request checklist for testing, screenshots, and documentation.
 - Added release notes for the full-stack MVP milestone.
 - Updated README documentation index and GitHub workflow notes.
+
+## Stage 17: Frontend Performance Optimization
+
+- Converted student and admin page routes to lazy-loaded chunks.
+- Added a shared route loading fallback for page transitions.
+- Reduced the initial frontend production bundle size.

@@ -1,45 +1,51 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import Login from './pages/Login.jsx';
-import Register from './pages/Register.jsx';
-import Dashboard from './pages/Dashboard.jsx';
-import Topics from './pages/Topics.jsx';
-import Courses from './pages/Courses.jsx';
-import CourseDetails from './pages/CourseDetails.jsx';
-import TopicDetails from './pages/TopicDetails.jsx';
-import TopicStatusPage from './pages/TopicStatusPage.jsx';
-import SavedTopics from './pages/SavedTopics.jsx';
-import Notes from './pages/Notes.jsx';
-import DailyPlan from './pages/DailyPlan.jsx';
-import Certificate from './pages/Certificate.jsx';
-import Search from './pages/Search.jsx';
-import Notifications from './pages/Notifications.jsx';
-import Leaderboard from './pages/Leaderboard.jsx';
-import Quiz from './pages/Quiz.jsx';
-import Chatbot from './pages/Chatbot.jsx';
-import Profile from './pages/Profile.jsx';
-import AdminOverview from './pages/admin/AdminOverview.jsx';
-import ManageCourses from './pages/admin/ManageCourses.jsx';
-import ManageModules from './pages/admin/ManageModules.jsx';
-import ManageTopics from './pages/admin/ManageTopics.jsx';
-import ManageNotes from './pages/admin/ManageNotes.jsx';
-import ManageQuizzes from './pages/admin/ManageQuizzes.jsx';
-import ManageExams from './pages/admin/ManageExams.jsx';
-import ManageStudents from './pages/admin/ManageStudents.jsx';
-import AddStudent from './pages/admin/AddStudent.jsx';
-import ViewStudents from './pages/admin/ViewStudents.jsx';
-import EditStudent from './pages/admin/EditStudent.jsx';
-import StudentDetails from './pages/admin/StudentDetails.jsx';
-import StudentProgress from './pages/admin/StudentProgress.jsx';
-import StudentScores from './pages/admin/StudentScores.jsx';
-import AdminLeaderboard from './pages/admin/AdminLeaderboard.jsx';
-import AdminAITools from './pages/admin/AdminAITools.jsx';
-import AdminProfile from './pages/admin/AdminProfile.jsx';
 import ProtectedRoute from './components/ProtectedRoute.jsx';
 import AdminRoute from './components/AdminRoute.jsx';
 import AppLayout from './components/layout/AppLayout.jsx';
+import LoadingSpinner from './components/ui/LoadingSpinner.jsx';
 import { isAdmin, isAuthenticated } from './services/authService';
+
+const Login = lazy(() => import('./pages/Login.jsx'));
+const Register = lazy(() => import('./pages/Register.jsx'));
+const Dashboard = lazy(() => import('./pages/Dashboard.jsx'));
+const Topics = lazy(() => import('./pages/Topics.jsx'));
+const Courses = lazy(() => import('./pages/Courses.jsx'));
+const CourseDetails = lazy(() => import('./pages/CourseDetails.jsx'));
+const TopicDetails = lazy(() => import('./pages/TopicDetails.jsx'));
+const TopicStatusPage = lazy(() => import('./pages/TopicStatusPage.jsx'));
+const SavedTopics = lazy(() => import('./pages/SavedTopics.jsx'));
+const Notes = lazy(() => import('./pages/Notes.jsx'));
+const DailyPlan = lazy(() => import('./pages/DailyPlan.jsx'));
+const Certificate = lazy(() => import('./pages/Certificate.jsx'));
+const Search = lazy(() => import('./pages/Search.jsx'));
+const Notifications = lazy(() => import('./pages/Notifications.jsx'));
+const Leaderboard = lazy(() => import('./pages/Leaderboard.jsx'));
+const Quiz = lazy(() => import('./pages/Quiz.jsx'));
+const Chatbot = lazy(() => import('./pages/Chatbot.jsx'));
+const Profile = lazy(() => import('./pages/Profile.jsx'));
+const AdminOverview = lazy(() => import('./pages/admin/AdminOverview.jsx'));
+const ManageCourses = lazy(() => import('./pages/admin/ManageCourses.jsx'));
+const ManageModules = lazy(() => import('./pages/admin/ManageModules.jsx'));
+const ManageTopics = lazy(() => import('./pages/admin/ManageTopics.jsx'));
+const ManageNotes = lazy(() => import('./pages/admin/ManageNotes.jsx'));
+const ManageQuizzes = lazy(() => import('./pages/admin/ManageQuizzes.jsx'));
+const ManageExams = lazy(() => import('./pages/admin/ManageExams.jsx'));
+const ManageStudents = lazy(() => import('./pages/admin/ManageStudents.jsx'));
+const AddStudent = lazy(() => import('./pages/admin/AddStudent.jsx'));
+const ViewStudents = lazy(() => import('./pages/admin/ViewStudents.jsx'));
+const EditStudent = lazy(() => import('./pages/admin/EditStudent.jsx'));
+const StudentDetails = lazy(() => import('./pages/admin/StudentDetails.jsx'));
+const StudentProgress = lazy(() => import('./pages/admin/StudentProgress.jsx'));
+const StudentScores = lazy(() => import('./pages/admin/StudentScores.jsx'));
+const AdminLeaderboard = lazy(() => import('./pages/admin/AdminLeaderboard.jsx'));
+const AdminAITools = lazy(() => import('./pages/admin/AdminAITools.jsx'));
+const AdminProfile = lazy(() => import('./pages/admin/AdminProfile.jsx'));
+
+function RouteFallback() {
+  return <LoadingSpinner label="Loading page..." />;
+}
 
 function StudentRoutes() {
   const loggedIn = isAuthenticated('student');
@@ -193,49 +199,51 @@ function StudentRoutes() {
 function App() {
   return (
     <>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        <Route path="/admin/login" element={<Login adminMode />} />
-        <Route
-          path="/admin"
-          element={
-            <AdminRoute>
-              <AdminOverview />
-            </AdminRoute>
-          }
-        />
-        <Route path="/admin/courses" element={<AdminRoute><ManageCourses /></AdminRoute>} />
-        <Route path="/admin/courses/add" element={<AdminRoute><ManageCourses /></AdminRoute>} />
-        <Route path="/admin/courses/:courseId/edit" element={<AdminRoute><ManageCourses /></AdminRoute>} />
-        <Route path="/admin/modules" element={<AdminRoute><ManageModules /></AdminRoute>} />
-        <Route path="/admin/modules/add" element={<AdminRoute><ManageModules /></AdminRoute>} />
-        <Route path="/admin/modules/:moduleId/edit" element={<AdminRoute><ManageModules /></AdminRoute>} />
-        <Route path="/admin/topics" element={<AdminRoute><ManageTopics /></AdminRoute>} />
-        <Route path="/admin/topics/add" element={<AdminRoute><ManageTopics /></AdminRoute>} />
-        <Route path="/admin/topics/:topicId/edit" element={<AdminRoute><ManageTopics /></AdminRoute>} />
-        <Route path="/admin/notes" element={<AdminRoute><ManageNotes /></AdminRoute>} />
-        <Route path="/admin/notes/add" element={<AdminRoute><ManageNotes /></AdminRoute>} />
-        <Route path="/admin/notes/:noteId/edit" element={<AdminRoute><ManageNotes /></AdminRoute>} />
-        <Route path="/admin/quizzes" element={<AdminRoute><ManageQuizzes /></AdminRoute>} />
-        <Route path="/admin/quizzes/add" element={<AdminRoute><ManageQuizzes /></AdminRoute>} />
-        <Route path="/admin/quizzes/:questionId/edit" element={<AdminRoute><ManageQuizzes /></AdminRoute>} />
-        <Route path="/admin/exams" element={<AdminRoute><ManageExams /></AdminRoute>} />
-        <Route path="/admin/exams/add" element={<AdminRoute><ManageExams /></AdminRoute>} />
-        <Route path="/admin/exams/:examId/edit" element={<AdminRoute><ManageExams /></AdminRoute>} />
-        <Route path="/admin/students" element={<AdminRoute><ViewStudents /></AdminRoute>} />
-        <Route path="/admin/students/add" element={<AdminRoute><AddStudent /></AdminRoute>} />
-        <Route path="/admin/students/:studentId/edit" element={<AdminRoute><EditStudent /></AdminRoute>} />
-        <Route path="/admin/students/:studentId" element={<AdminRoute><StudentDetails /></AdminRoute>} />
-        <Route path="/admin/students/progress" element={<AdminRoute><StudentProgress /></AdminRoute>} />
-        <Route path="/admin/students/scores" element={<AdminRoute><StudentScores /></AdminRoute>} />
-        <Route path="/admin/students/manage" element={<AdminRoute><ManageStudents /></AdminRoute>} />
-        <Route path="/admin/leaderboard" element={<AdminRoute><AdminLeaderboard /></AdminRoute>} />
-        <Route path="/admin/ai-tools" element={<AdminRoute><AdminAITools /></AdminRoute>} />
-        <Route path="/admin/profile" element={<AdminRoute><AdminProfile /></AdminRoute>} />
-        <Route path="/*" element={<StudentRoutes />} />
-      </Routes>
+      <Suspense fallback={<RouteFallback />}>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/admin/login" element={<Login adminMode />} />
+          <Route
+            path="/admin"
+            element={
+              <AdminRoute>
+                <AdminOverview />
+              </AdminRoute>
+            }
+          />
+          <Route path="/admin/courses" element={<AdminRoute><ManageCourses /></AdminRoute>} />
+          <Route path="/admin/courses/add" element={<AdminRoute><ManageCourses /></AdminRoute>} />
+          <Route path="/admin/courses/:courseId/edit" element={<AdminRoute><ManageCourses /></AdminRoute>} />
+          <Route path="/admin/modules" element={<AdminRoute><ManageModules /></AdminRoute>} />
+          <Route path="/admin/modules/add" element={<AdminRoute><ManageModules /></AdminRoute>} />
+          <Route path="/admin/modules/:moduleId/edit" element={<AdminRoute><ManageModules /></AdminRoute>} />
+          <Route path="/admin/topics" element={<AdminRoute><ManageTopics /></AdminRoute>} />
+          <Route path="/admin/topics/add" element={<AdminRoute><ManageTopics /></AdminRoute>} />
+          <Route path="/admin/topics/:topicId/edit" element={<AdminRoute><ManageTopics /></AdminRoute>} />
+          <Route path="/admin/notes" element={<AdminRoute><ManageNotes /></AdminRoute>} />
+          <Route path="/admin/notes/add" element={<AdminRoute><ManageNotes /></AdminRoute>} />
+          <Route path="/admin/notes/:noteId/edit" element={<AdminRoute><ManageNotes /></AdminRoute>} />
+          <Route path="/admin/quizzes" element={<AdminRoute><ManageQuizzes /></AdminRoute>} />
+          <Route path="/admin/quizzes/add" element={<AdminRoute><ManageQuizzes /></AdminRoute>} />
+          <Route path="/admin/quizzes/:questionId/edit" element={<AdminRoute><ManageQuizzes /></AdminRoute>} />
+          <Route path="/admin/exams" element={<AdminRoute><ManageExams /></AdminRoute>} />
+          <Route path="/admin/exams/add" element={<AdminRoute><ManageExams /></AdminRoute>} />
+          <Route path="/admin/exams/:examId/edit" element={<AdminRoute><ManageExams /></AdminRoute>} />
+          <Route path="/admin/students" element={<AdminRoute><ViewStudents /></AdminRoute>} />
+          <Route path="/admin/students/add" element={<AdminRoute><AddStudent /></AdminRoute>} />
+          <Route path="/admin/students/:studentId/edit" element={<AdminRoute><EditStudent /></AdminRoute>} />
+          <Route path="/admin/students/:studentId" element={<AdminRoute><StudentDetails /></AdminRoute>} />
+          <Route path="/admin/students/progress" element={<AdminRoute><StudentProgress /></AdminRoute>} />
+          <Route path="/admin/students/scores" element={<AdminRoute><StudentScores /></AdminRoute>} />
+          <Route path="/admin/students/manage" element={<AdminRoute><ManageStudents /></AdminRoute>} />
+          <Route path="/admin/leaderboard" element={<AdminRoute><AdminLeaderboard /></AdminRoute>} />
+          <Route path="/admin/ai-tools" element={<AdminRoute><AdminAITools /></AdminRoute>} />
+          <Route path="/admin/profile" element={<AdminRoute><AdminProfile /></AdminRoute>} />
+          <Route path="/*" element={<StudentRoutes />} />
+        </Routes>
+      </Suspense>
       <ToastContainer position="top-right" autoClose={2600} newestOnTop closeOnClick pauseOnHover />
     </>
   );

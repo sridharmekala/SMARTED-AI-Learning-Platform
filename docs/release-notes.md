@@ -25,4 +25,4 @@ Initial SMARTED AI Learning Platform milestone.
 - Connect Render and Vercel dashboards to create public live URLs.
 - Refresh screenshots after live deployment.
 - Add release tags after deployment is confirmed.
-- Consider frontend code splitting to reduce the largest production chunk.
+- Continue monitoring production bundle size as more pages are added.

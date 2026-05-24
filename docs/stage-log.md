@@ -44,3 +44,9 @@
 - Verified dashboard, progress, topic status, and leaderboard backend services.
 - Verified frontend dashboard, topic status pages, score chart, and leaderboard integration.
 - Added dashboard/progress documentation with data rules, endpoints, ranking logic, and verification checklist.
+
+## Stage 8: Admin Dashboard Added
+
+- Verified admin-only backend endpoints for courses, topics, quiz questions, students, progress, and scores.
+- Verified frontend admin route protection, admin layout/sidebar, overview page, and admin service integration.
+- Added admin dashboard documentation with access control, endpoint list, data-safety rules, and verification checklist.

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Project documentation
+    url: https://github.com/sridharmekala/SMARTED-AI-Learning-Platform#readme
+    about: Review setup, API, and deployment docs before filing an issue.

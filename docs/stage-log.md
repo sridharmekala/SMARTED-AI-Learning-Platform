@@ -100,3 +100,10 @@
 - Added GitHub Actions CI for backend tests and frontend production build.
 - Added frontend production environment example.
 - Added live-link setup documentation for Render and Vercel dashboard deployment.
+
+## Stage 16: GitHub Project Polish
+
+- Added bug report and feature request issue templates.
+- Added pull request checklist for testing, screenshots, and documentation.
+- Added release notes for the full-stack MVP milestone.
+- Updated README documentation index and GitHub workflow notes.

@@ -1,0 +1,40 @@
+name: Feature Request
+description: Suggest an improvement or new capability for SMARTED.
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Opportunity
+      description: What student, admin, or teacher need does this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Describe the feature and expected user flow.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Optional alternatives or simpler versions.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Student learning
+        - Quiz and scoring
+        - Dashboard and progress
+        - Admin management
+        - AI tutor
+        - Deployment
+        - Documentation
+        - Other
+    validations:
+      required: true

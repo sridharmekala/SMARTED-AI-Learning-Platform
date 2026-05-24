@@ -77,6 +77,7 @@ Documentation index:
 - Final QA: `docs/final-qa.md`
 - Deployment: `docs/deployment.md`
 - Live link setup: `docs/live-link-setup.md`
+- Release notes: `docs/release-notes.md`
 
 Key endpoints include:
 
@@ -166,6 +167,8 @@ Required stage commit examples:
 - `Stage 5: Learning Module Added`
 
 Current stage history is tracked in `docs/stage-log.md`.
+
+GitHub collaboration files include issue templates, a pull request checklist, and CI checks for backend tests plus frontend builds.
 
 ## Future Enhancements
 

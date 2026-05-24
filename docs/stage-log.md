@@ -71,3 +71,10 @@
 - Verified certificate eligibility checks for locked and completed course states.
 - Verified frontend profile editing and certificate PDF generation integration.
 - Added profile and certificate documentation with flows, endpoints, rules, and verification checklist.
+
+## Stage 12: Final QA and Bug Fixes
+
+- Ran static QA checks for debug statements, TODOs, hardcoded secret patterns, encoding artifacts, and Git hygiene.
+- Re-ran backend and frontend build checks.
+- Smoke-tested key authenticated student and admin backend flows.
+- Added final QA documentation with check scope, results, and known follow-ups.

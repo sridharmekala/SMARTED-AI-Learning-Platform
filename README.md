@@ -65,6 +65,7 @@ Admin dashboard documentation is available in `docs/admin-dashboard.md`.
 AI chatbot documentation is available in `docs/ai-chatbot.md`.
 Student support feature documentation is available in `docs/student-support-features.md`.
 Profile and certificate documentation is available in `docs/profile-certificates.md`.
+Final QA documentation is available in `docs/final-qa.md`.
 
 Key endpoints include:
 

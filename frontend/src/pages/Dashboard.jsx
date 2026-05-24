@@ -75,7 +75,7 @@ function Dashboard() {
             </Link>
             <Link className="primary-link" to="/daily-plan">
               <FiCalendar aria-hidden="true" />
-              Today’s Plan
+              Today's Plan
             </Link>
             <Link className="primary-link" to="/topics">Explore Course Modules</Link>
             <Link className="secondary-link" to="/chat">Ask AI Tutor</Link>

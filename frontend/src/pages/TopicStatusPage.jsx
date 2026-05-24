@@ -41,7 +41,7 @@ function TopicStatusPage() {
       return 'No new pending modules right now.';
     }
     return 'No pending modules. Nice work.';
-  }, [normalizedStatus]);
+  }, [courseId, normalizedStatus]);
 
   useEffect(() => {
     async function loadTopics() {

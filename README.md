@@ -59,6 +59,7 @@ Detailed endpoint documentation is available in `docs/api-endpoints.md`.
 Database model documentation is available in `docs/database-models.md`.
 Authentication documentation is available in `docs/authentication.md`.
 Learning module documentation is available in `docs/learning-module.md`.
+Quiz module documentation is available in `docs/quiz-module.md`.
 
 Key endpoints include:
 

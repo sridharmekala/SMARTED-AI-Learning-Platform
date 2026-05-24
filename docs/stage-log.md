@@ -32,3 +32,9 @@
 - Verified course, topic, topic completion, recommendation, saved-topic, note, and daily-plan learning flows.
 - Documented backend controllers/services, frontend pages/services, student flow, endpoints, and progress rules.
 - Confirmed topic completion updates `user_topic_progress` and feeds progress percentage, dashboard, and daily plan data.
+
+## Stage 6: Quiz Module Added
+
+- Verified topic quiz retrieval, quiz submission, score persistence, and level calculation.
+- Verified frontend quiz page and API client integration.
+- Added quiz module documentation with flow, endpoints, validation rules, and verification checklist.

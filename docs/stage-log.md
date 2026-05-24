@@ -113,3 +113,10 @@
 - Converted student and admin page routes to lazy-loaded chunks.
 - Added a shared route loading fallback for page transitions.
 - Reduced the initial frontend production bundle size.
+
+## Stage 18: Release Handoff and Tagging
+
+- Added changelog for the first full-stack MVP release.
+- Added production handoff documentation for deployment owners.
+- Updated README documentation index with release and handoff references.
+- Prepared the repository for the `v0.1.0` release tag.

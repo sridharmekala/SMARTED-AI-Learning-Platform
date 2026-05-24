@@ -78,6 +78,7 @@ Documentation index:
 - Deployment: `docs/deployment.md`
 - Live link setup: `docs/live-link-setup.md`
 - Release notes: `docs/release-notes.md`
+- Production handoff: `docs/production-handoff.md`
 
 Key endpoints include:
 
@@ -169,6 +170,8 @@ Required stage commit examples:
 Current stage history is tracked in `docs/stage-log.md`.
 
 GitHub collaboration files include issue templates, a pull request checklist, and CI checks for backend tests plus frontend builds.
+
+Release history is tracked in `CHANGELOG.md`.
 
 ## Future Enhancements
 

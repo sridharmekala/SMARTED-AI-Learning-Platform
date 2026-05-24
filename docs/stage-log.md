@@ -50,3 +50,10 @@
 - Verified admin-only backend endpoints for courses, topics, quiz questions, students, progress, and scores.
 - Verified frontend admin route protection, admin layout/sidebar, overview page, and admin service integration.
 - Added admin dashboard documentation with access control, endpoint list, data-safety rules, and verification checklist.
+
+## Stage 9: AI Chatbot Added
+
+- Verified protected chatbot endpoints for sending messages, loading history, and clearing history.
+- Verified NVIDIA NIM configuration uses environment variables instead of committed API keys.
+- Verified frontend AI tutor page and chat API client integration.
+- Added AI chatbot documentation with provider configuration, endpoints, request/response examples, and error handling.

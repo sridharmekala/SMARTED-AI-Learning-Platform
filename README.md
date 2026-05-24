@@ -62,6 +62,7 @@ Learning module documentation is available in `docs/learning-module.md`.
 Quiz module documentation is available in `docs/quiz-module.md`.
 Dashboard and progress documentation is available in `docs/dashboard-progress.md`.
 Admin dashboard documentation is available in `docs/admin-dashboard.md`.
+AI chatbot documentation is available in `docs/ai-chatbot.md`.
 
 Key endpoints include:
 

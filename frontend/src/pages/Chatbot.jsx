@@ -179,7 +179,7 @@ function Chatbot() {
                 <p>{message.text}</p>
                 {(message.model || message.createdAt) && (
                   <span>
-                    {message.model ? `${message.model} · ` : ''}
+                    {message.model ? `${message.model} - ` : ''}
                     {message.createdAt ? new Date(message.createdAt).toLocaleString() : ''}
                   </span>
                 )}

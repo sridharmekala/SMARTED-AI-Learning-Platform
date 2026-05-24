@@ -57,3 +57,10 @@
 - Verified NVIDIA NIM configuration uses environment variables instead of committed API keys.
 - Verified frontend AI tutor page and chat API client integration.
 - Added AI chatbot documentation with provider configuration, endpoints, request/response examples, and error handling.
+
+## Stage 10: Notes, Saved Topics, and Notifications Added
+
+- Verified note creation, listing, updating, and deletion for authenticated students.
+- Verified saved-topic creation, listing, status checks, duplicate handling, and removal.
+- Verified generated learning notifications from progress and recommendation data.
+- Added student support feature documentation with endpoints, rules, and verification checklist.

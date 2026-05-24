@@ -6,6 +6,8 @@ SMARTED can be deployed as a split full-stack application:
 - Backend: Render, Railway, Fly.io, or another Java 21 Spring Boot host.
 - Database: Managed MySQL, such as Railway MySQL, PlanetScale, Aiven, or AWS RDS.
 
+Stage 15 adds a Render Blueprint, backend Dockerfile, GitHub Actions CI, and frontend production environment example. See `docs/live-link-setup.md` for the final dashboard steps.
+
 ## Backend
 
 Build command:
@@ -19,6 +21,8 @@ Start command:
 ```bash
 java -jar target/smarted-backend-0.0.1-SNAPSHOT.jar
 ```
+
+Docker deployment is also supported through `backend/Dockerfile` and the root `render.yaml` Blueprint.
 
 Required environment variables:
 
@@ -67,6 +71,8 @@ VITE_API_BASE_URL=https://your-backend-domain.example
 ```
 
 The frontend includes `vercel.json` so direct visits to React routes return `index.html`.
+
+Copy `frontend/.env.production.example` into the hosting provider environment settings and replace the backend URL.
 
 ## Release Checklist
 

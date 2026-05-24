@@ -9,6 +9,8 @@ desktop.ini
 .env
 .env.*
 !.env.example
+!.env.production.example
+!frontend/.env.production.example
 application-local.properties
 
 # Logs
@@ -32,4 +34,3 @@ coverage/
 .cache/
 tmp/
 temp/
-

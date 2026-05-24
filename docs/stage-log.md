@@ -92,3 +92,11 @@
 - Added backend Java runtime metadata for Java 21 hosting.
 - Updated backend port and CORS configuration to use deployment environment variables.
 - Added Vercel SPA rewrite configuration for frontend routes.
+
+## Stage 15: Production Deployment Setup
+
+- Added backend Dockerfile for cloud hosting.
+- Added Render Blueprint configuration for backend deployment.
+- Added GitHub Actions CI for backend tests and frontend production build.
+- Added frontend production environment example.
+- Added live-link setup documentation for Render and Vercel dashboard deployment.

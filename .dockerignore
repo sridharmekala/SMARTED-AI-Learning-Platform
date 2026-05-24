@@ -1,0 +1,12 @@
+.git
+.github
+screenshots
+docs
+frontend/node_modules
+frontend/dist
+frontend/.vite
+backend/target
+*.log
+.env
+.env.*
+!.env.example

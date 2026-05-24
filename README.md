@@ -76,6 +76,7 @@ Documentation index:
 - Screenshots: `docs/screenshots.md`
 - Final QA: `docs/final-qa.md`
 - Deployment: `docs/deployment.md`
+- Live link setup: `docs/live-link-setup.md`
 
 Key endpoints include:
 
@@ -168,7 +169,7 @@ Current stage history is tracked in `docs/stage-log.md`.
 
 ## Future Enhancements
 
-- Production deployment for frontend and backend
+- Production domain, release tagging, and live screenshot refresh
 - Email notifications
 - Advanced AI recommendations
 - Payment or subscription plans

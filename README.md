@@ -2,6 +2,8 @@
 
 SMARTED AI Learning Platform is a full-stack personalized learning system built with Spring Boot and React. It supports student learning journeys, quizzes, progress tracking, certificates, saved topics, notes, notifications, AI chatbot assistance, and admin management workflows.
 
+Project status: backend and frontend are implemented, tested locally, documented stage-by-stage, and pushed to GitHub through Stage 13.
+
 ## Features
 
 - Student registration and login with JWT authentication
@@ -18,11 +20,15 @@ SMARTED AI Learning Platform is a full-stack personalized learning system built 
 
 ## Screenshots
 
-Screenshots are stored in the `screenshots/` folder and should be added after every major UI update.
+Screenshots are stored in the `screenshots/` folder and should be refreshed after major UI updates.
 
 | Screen | Preview |
 | --- | --- |
-| Login Preview | `screenshots/stage17-login-preview.png` |
+| Student Login | ![Student Login](screenshots/stage13-login.png) |
+| Student Registration | ![Student Registration](screenshots/stage13-register.png) |
+| Admin Login | ![Admin Login](screenshots/stage13-admin-login.png) |
+
+More screenshot notes are available in `docs/screenshots.md`.
 
 ## Tech Stack
 
@@ -55,17 +61,20 @@ The backend runs locally on:
 http://localhost:8081
 ```
 
-Detailed endpoint documentation is available in `docs/api-endpoints.md`.
-Database model documentation is available in `docs/database-models.md`.
-Authentication documentation is available in `docs/authentication.md`.
-Learning module documentation is available in `docs/learning-module.md`.
-Quiz module documentation is available in `docs/quiz-module.md`.
-Dashboard and progress documentation is available in `docs/dashboard-progress.md`.
-Admin dashboard documentation is available in `docs/admin-dashboard.md`.
-AI chatbot documentation is available in `docs/ai-chatbot.md`.
-Student support feature documentation is available in `docs/student-support-features.md`.
-Profile and certificate documentation is available in `docs/profile-certificates.md`.
-Final QA documentation is available in `docs/final-qa.md`.
+Documentation index:
+
+- API endpoints: `docs/api-endpoints.md`
+- Database models: `docs/database-models.md`
+- Authentication: `docs/authentication.md`
+- Learning module: `docs/learning-module.md`
+- Quiz module: `docs/quiz-module.md`
+- Dashboard and progress: `docs/dashboard-progress.md`
+- Admin dashboard: `docs/admin-dashboard.md`
+- AI chatbot: `docs/ai-chatbot.md`
+- Student support features: `docs/student-support-features.md`
+- Profile and certificates: `docs/profile-certificates.md`
+- Screenshots: `docs/screenshots.md`
+- Final QA: `docs/final-qa.md`
 
 Key endpoints include:
 
@@ -152,6 +161,8 @@ Required stage commit examples:
 - `Stage 3: Database Models Added`
 - `Stage 4: JWT Authentication Implemented`
 - `Stage 5: Learning Module Added`
+
+Current stage history is tracked in `docs/stage-log.md`.
 
 ## Future Enhancements
 

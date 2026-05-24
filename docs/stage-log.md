@@ -78,3 +78,10 @@
 - Re-ran backend and frontend build checks.
 - Smoke-tested key authenticated student and admin backend flows.
 - Added final QA documentation with check scope, results, and known follow-ups.
+
+## Stage 13: Screenshots and README Polish
+
+- Captured updated student login, student registration, and admin login screenshots from the local frontend.
+- Updated README screenshots to render preview images directly on GitHub.
+- Added a compact documentation index and screenshot notes.
+- Added screenshot documentation with capture notes and future protected-page screenshot follow-ups.

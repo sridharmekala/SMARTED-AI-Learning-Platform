@@ -64,6 +64,7 @@ Dashboard and progress documentation is available in `docs/dashboard-progress.md
 Admin dashboard documentation is available in `docs/admin-dashboard.md`.
 AI chatbot documentation is available in `docs/ai-chatbot.md`.
 Student support feature documentation is available in `docs/student-support-features.md`.
+Profile and certificate documentation is available in `docs/profile-certificates.md`.
 
 Key endpoints include:
 

@@ -64,3 +64,10 @@
 - Verified saved-topic creation, listing, status checks, duplicate handling, and removal.
 - Verified generated learning notifications from progress and recommendation data.
 - Added student support feature documentation with endpoints, rules, and verification checklist.
+
+## Stage 11: Certificates and Profile Added
+
+- Verified profile retrieval and update flow, including refreshed JWT responses after account changes.
+- Verified certificate eligibility checks for locked and completed course states.
+- Verified frontend profile editing and certificate PDF generation integration.
+- Added profile and certificate documentation with flows, endpoints, rules, and verification checklist.

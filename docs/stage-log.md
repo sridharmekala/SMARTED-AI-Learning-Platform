@@ -146,3 +146,9 @@
 - Verified the Vercel frontend is reachable.
 - Added live frontend, backend, and health-check URLs to project documentation.
 - Updated production frontend environment example and Render CORS blueprint value.
+
+## Stage 23: Database Pool Limit Added
+
+- Added Hikari connection pool limits for free-tier MySQL providers.
+- Added Render Blueprint variables for database pool tuning.
+- Documented the Clever Cloud `max_user_connections` deployment fix.

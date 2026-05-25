@@ -25,6 +25,10 @@ Use environment variables for local secrets. Do not commit real passwords, JWT s
 | `MYSQL_ADDON_DB` | Clever Cloud MySQL database name, preferred when set | empty |
 | `MYSQL_ADDON_USER` | Clever Cloud MySQL username, preferred when set | empty |
 | `MYSQL_ADDON_PASSWORD` | Clever Cloud MySQL password, preferred when set | empty |
+| `DB_POOL_MAX_SIZE` | Maximum Hikari database connections | `2` |
+| `DB_POOL_MIN_IDLE` | Minimum idle database connections | `0` |
+| `DB_POOL_IDLE_TIMEOUT_MS` | Idle connection timeout in milliseconds | `30000` |
+| `DB_POOL_CONNECTION_TIMEOUT_MS` | Connection wait timeout in milliseconds | `30000` |
 | `JWT_SECRET` | JWT signing secret | development placeholder |
 | `JWT_EXPIRATION_MS` | JWT expiry time in milliseconds | `86400000` |
 | `ADMIN_SEED_ENABLED` | Enables seeded admin creation | `true` |
@@ -45,6 +49,8 @@ $env:ADMIN_SEED_PASSWORD="replace-with-a-temporary-admin-password"
 ```
 
 For Clever Cloud, you can paste the provided `MYSQL_ADDON_HOST`, `MYSQL_ADDON_PORT`, `MYSQL_ADDON_DB`, `MYSQL_ADDON_USER`, and `MYSQL_ADDON_PASSWORD` variables directly into Render. The backend prefers those values when present and falls back to the generic `DB_*` values otherwise. If an old `DB_URL` variable exists in Render from a previous deploy attempt, remove it.
+
+Clever Cloud free MySQL can have a low `max_user_connections` limit. Keep `DB_POOL_MAX_SIZE=2` on Render, and stop older Render services that use the same database before redeploying.
 
 If `ADMIN_SEED_PASSWORD` is empty, the backend will not create a new default admin account. Existing seeded admin users keep their admin role.
 

@@ -30,6 +30,14 @@ services:
         sync: false
       - key: MYSQL_ADDON_PASSWORD
         sync: false
+      - key: DB_POOL_MAX_SIZE
+        value: 2
+      - key: DB_POOL_MIN_IDLE
+        value: 0
+      - key: DB_POOL_IDLE_TIMEOUT_MS
+        value: 30000
+      - key: DB_POOL_CONNECTION_TIMEOUT_MS
+        value: 30000
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRATION_MS

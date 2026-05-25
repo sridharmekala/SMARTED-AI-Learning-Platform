@@ -30,7 +30,10 @@ v0.1.0 - Full-Stack MVP
 3. Set backend secrets:
 
 ```bash
-DB_URL=jdbc:mysql://host:3306/smarted_db?useSSL=true&serverTimezone=UTC
+DB_HOST=host
+DB_PORT=3306
+DB_NAME=database-name
+DB_USE_SSL=true
 DB_USERNAME=database-user
 DB_PASSWORD=database-password
 JWT_SECRET=strong-random-secret

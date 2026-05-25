@@ -127,3 +127,9 @@
 - Prevented new default admin creation unless `ADMIN_SEED_PASSWORD` is set.
 - Removed visible default admin credentials from the frontend login screen.
 - Updated setup, deployment, production handoff, and release documentation.
+
+## Stage 20: Clever Cloud MySQL Deployment Fix
+
+- Added support for `DB_HOST`, `DB_PORT`, `DB_NAME`, and `DB_USE_SSL` database environment variables.
+- Aligned backend datasource configuration with Clever Cloud-style Render environment variables.
+- Updated Render Blueprint and deployment documentation for cloud MySQL credentials.

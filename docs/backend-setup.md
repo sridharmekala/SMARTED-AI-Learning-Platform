@@ -14,7 +14,10 @@ Use environment variables for local secrets. Do not commit real passwords, JWT s
 
 | Variable | Purpose | Default |
 | --- | --- | --- |
-| `DB_URL` | MySQL JDBC connection URL | `jdbc:mysql://localhost:3306/smarted_db?...` |
+| `DB_HOST` | MySQL host | `localhost` |
+| `DB_PORT` | MySQL port | `3306` |
+| `DB_NAME` | MySQL database name | `smarted_db` |
+| `DB_USE_SSL` | Enables SSL in the generated JDBC URL | `false` |
 | `DB_USERNAME` | MySQL username | `root` |
 | `DB_PASSWORD` | MySQL password | empty |
 | `JWT_SECRET` | JWT signing secret | development placeholder |
@@ -35,6 +38,8 @@ $env:DB_PASSWORD="your-password"
 $env:JWT_SECRET="replace-with-a-long-random-secret-at-least-32-characters"
 $env:ADMIN_SEED_PASSWORD="replace-with-a-temporary-admin-password"
 ```
+
+For cloud MySQL providers such as Clever Cloud, set `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USERNAME`, and `DB_PASSWORD` in Render. If an old `DB_URL` variable exists in Render from a previous deploy attempt, remove it so these values are used.
 
 If `ADMIN_SEED_PASSWORD` is empty, the backend will not create a new default admin account. Existing seeded admin users keep their admin role.
 

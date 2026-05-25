@@ -27,7 +27,10 @@ Docker deployment is also supported through `backend/Dockerfile` and the root `r
 Required environment variables:
 
 ```bash
-DB_URL=jdbc:mysql://host:3306/smarted_db?useSSL=true&serverTimezone=UTC
+DB_HOST=host
+DB_PORT=3306
+DB_NAME=smarted_db
+DB_USE_SSL=true
 DB_USERNAME=database-user
 DB_PASSWORD=database-password
 JWT_SECRET=replace-with-a-long-random-secret-at-least-32-characters

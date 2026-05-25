@@ -8,8 +8,14 @@ services:
     healthCheckPath: /health
     autoDeploy: true
     envVars:
-      - key: DB_URL
+      - key: DB_HOST
         sync: false
+      - key: DB_PORT
+        value: 3306
+      - key: DB_NAME
+        sync: false
+      - key: DB_USE_SSL
+        value: true
       - key: DB_USERNAME
         sync: false
       - key: DB_PASSWORD

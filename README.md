@@ -125,7 +125,9 @@ OK
 By default, the backend uses the values from `backend/src/main/resources/application.properties`. For local secrets, set environment variables instead of editing secrets into source code:
 
 ```bash
-DB_URL=jdbc:mysql://localhost:3306/smarted_db?createDatabaseIfNotExist=true
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=smarted_db
 DB_USERNAME=root
 DB_PASSWORD=your-password
 JWT_SECRET=your-long-random-secret

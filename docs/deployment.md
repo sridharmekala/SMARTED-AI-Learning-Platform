@@ -47,7 +47,7 @@ MYSQL_ADDON_PASSWORD=clever-cloud-password
 DB_POOL_MAX_SIZE=2
 DB_POOL_MIN_IDLE=0
 JWT_SECRET=replace-with-a-long-random-secret-at-least-32-characters
-CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app
+CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app,https://*.vercel.app
 ADMIN_SEED_PASSWORD=replace-with-a-temporary-admin-password
 ```
 
@@ -97,5 +97,5 @@ Copy `frontend/.env.production.example` into the hosting provider environment se
 - Confirm no API keys are committed to source control.
 - Confirm backend `/health` returns `OK`.
 - Confirm frontend login, registration, dashboard, and admin routes load after deployment.
-- Add production frontend origin to `CORS_ALLOWED_ORIGIN_PATTERNS`.
+- Add production and preview frontend origins to `CORS_ALLOWED_ORIGIN_PATTERNS`.
 - Capture fresh screenshots after the deployed UI is verified.

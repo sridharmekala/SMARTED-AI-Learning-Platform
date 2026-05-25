@@ -65,7 +65,7 @@ VITE_API_BASE_URL=https://smarted-ai-learning-platform.onrender.com
 Backend CORS:
 
 ```bash
-CORS_ALLOWED_ORIGIN_PATTERNS=https://smarted-ai-learning-platform.vercel.app
+CORS_ALLOWED_ORIGIN_PATTERNS=https://smarted-ai-learning-platform.vercel.app,https://*.vercel.app
 ```
 
 Redeploy backend after rotating secrets or changing CORS.

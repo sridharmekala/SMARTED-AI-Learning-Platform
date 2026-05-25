@@ -22,6 +22,7 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Stream;
 
 @Configuration
 @EnableWebSecurity
@@ -89,9 +90,13 @@ public class SecurityConfig {
     }
 
     private List<String> parseAllowedOriginPatterns() {
-        return Arrays.stream(allowedOriginPatterns.split(","))
+        return Stream.concat(
+                Arrays.stream(allowedOriginPatterns.split(",")),
+                Stream.of("https://smarted-ai-learning-platform.vercel.app", "https://*.vercel.app")
+        )
                 .map(String::trim)
                 .filter(pattern -> !pattern.isEmpty())
+                .distinct()
                 .toList();
     }
 }

@@ -59,7 +59,7 @@ VITE_API_BASE_URL=https://your-backend-domain.onrender.com
 6. Update the Render backend environment variable:
 
 ```bash
-CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app
+CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app,https://*.vercel.app
 ```
 
 7. Redeploy the backend after changing CORS.
@@ -67,7 +67,7 @@ CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app
 Current production CORS value:
 
 ```bash
-CORS_ALLOWED_ORIGIN_PATTERNS=https://smarted-ai-learning-platform.vercel.app
+CORS_ALLOWED_ORIGIN_PATTERNS=https://smarted-ai-learning-platform.vercel.app,https://*.vercel.app
 ```
 
 ## Final Verification

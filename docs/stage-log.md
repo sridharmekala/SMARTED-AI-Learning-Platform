@@ -158,3 +158,9 @@
 - Added the production Vercel origin to backend default CORS configuration.
 - Permitted all preflight `OPTIONS` requests in Spring Security.
 - Relaxed CORS request headers to support browser preflight variations.
+
+## Stage 25: Vercel Preview CORS Support Added
+
+- Added `https://*.vercel.app` to backend CORS defaults for Vercel preview deployments.
+- Merged production Vercel defaults with environment-provided CORS origins.
+- Updated Render Blueprint and deployment documentation with production plus preview CORS origins.

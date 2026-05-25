@@ -152,3 +152,9 @@
 - Added Hikari connection pool limits for free-tier MySQL providers.
 - Added Render Blueprint variables for database pool tuning.
 - Documented the Clever Cloud `max_user_connections` deployment fix.
+
+## Stage 24: Production CORS Fallback Added
+
+- Added the production Vercel origin to backend default CORS configuration.
+- Permitted all preflight `OPTIONS` requests in Spring Security.
+- Relaxed CORS request headers to support browser preflight variations.

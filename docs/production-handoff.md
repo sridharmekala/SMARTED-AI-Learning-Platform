@@ -35,7 +35,10 @@ DB_USERNAME=database-user
 DB_PASSWORD=database-password
 JWT_SECRET=strong-random-secret
 NVIDIA_API_KEY=nvapi-your-key
+ADMIN_SEED_PASSWORD=temporary-admin-password
 ```
+
+Rotate or remove the seeded admin password after creating a permanent admin process.
 
 4. Deploy the frontend from the `frontend` root directory.
 5. Set frontend environment:

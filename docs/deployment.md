@@ -32,6 +32,7 @@ DB_USERNAME=database-user
 DB_PASSWORD=database-password
 JWT_SECRET=replace-with-a-long-random-secret-at-least-32-characters
 CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app
+ADMIN_SEED_PASSWORD=replace-with-a-temporary-admin-password
 ```
 
 Optional AI environment variables:

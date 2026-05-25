@@ -65,7 +65,7 @@ function Login({ adminMode = false }) {
 
         <div className="auth-card panel">
           <h1>{adminMode ? 'Admin Login' : 'Login'}</h1>
-          <p className="muted">{adminMode ? 'Default admin: admin@smarted.com / admin123' : 'Enter your student account details.'}</p>
+          <p className="muted">{adminMode ? 'Use the admin account configured for this deployment.' : 'Enter your student account details.'}</p>
           <form className="auth-form" onSubmit={handleSubmit}>
             <label>
               Email

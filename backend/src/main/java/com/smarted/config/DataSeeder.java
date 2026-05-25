@@ -9,6 +9,7 @@ import com.smarted.repository.QuizQuestionRepository;
 import com.smarted.repository.TopicRepository;
 import com.smarted.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
@@ -20,6 +21,18 @@ public class DataSeeder implements CommandLineRunner {
     private final CourseRepository courseRepository;
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
+
+    @Value("${app.seed.admin.enabled}")
+    private boolean adminSeedEnabled;
+
+    @Value("${app.seed.admin.name}")
+    private String adminSeedName;
+
+    @Value("${app.seed.admin.email}")
+    private String adminSeedEmail;
+
+    @Value("${app.seed.admin.password}")
+    private String adminSeedPassword;
 
     public DataSeeder(
             TopicRepository topicRepository,
@@ -186,17 +199,31 @@ public class DataSeeder implements CommandLineRunner {
     }
 
     private void seedAdmin() {
-        userRepository.findByEmail("admin@smarted.com")
-                .map(admin -> {
-                    admin.setRole("ADMIN");
-                    return userRepository.save(admin);
-                })
-                .orElseGet(() -> userRepository.save(new User(
-                    "SMARTED Admin",
-                    "admin@smarted.com",
-                    passwordEncoder.encode("admin123"),
+        if (!adminSeedEnabled || isBlank(adminSeedEmail)) {
+            return;
+        }
+
+        String adminEmail = adminSeedEmail.trim();
+
+        userRepository.findByEmail(adminEmail).ifPresentOrElse(admin -> {
+            admin.setRole("ADMIN");
+            userRepository.save(admin);
+        }, () -> {
+            if (isBlank(adminSeedPassword)) {
+                return;
+            }
+
+            userRepository.save(new User(
+                    isBlank(adminSeedName) ? "SMARTED Admin" : adminSeedName.trim(),
+                    adminEmail,
+                    passwordEncoder.encode(adminSeedPassword),
                     "ADMIN"
-            )));
+            ));
+        });
+    }
+
+    private boolean isBlank(String value) {
+        return value == null || value.isBlank();
     }
 
     private void migrateMissingRoles() {

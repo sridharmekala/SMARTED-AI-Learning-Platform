@@ -120,3 +120,10 @@
 - Added production handoff documentation for deployment owners.
 - Updated README documentation index with release and handoff references.
 - Prepared the repository for the `v0.1.0` release tag.
+
+## Stage 19: Admin Seed Security Hardening
+
+- Moved seeded admin credentials into environment-driven backend configuration.
+- Prevented new default admin creation unless `ADMIN_SEED_PASSWORD` is set.
+- Removed visible default admin credentials from the frontend login screen.
+- Updated setup, deployment, production handoff, and release documentation.

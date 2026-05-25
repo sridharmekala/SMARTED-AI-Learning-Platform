@@ -19,6 +19,10 @@ Use environment variables for local secrets. Do not commit real passwords, JWT s
 | `DB_PASSWORD` | MySQL password | empty |
 | `JWT_SECRET` | JWT signing secret | development placeholder |
 | `JWT_EXPIRATION_MS` | JWT expiry time in milliseconds | `86400000` |
+| `ADMIN_SEED_ENABLED` | Enables seeded admin creation | `true` |
+| `ADMIN_SEED_NAME` | Seeded admin display name | `SMARTED Admin` |
+| `ADMIN_SEED_EMAIL` | Seeded admin email | `admin@smarted.com` |
+| `ADMIN_SEED_PASSWORD` | Temporary seeded admin password | empty, admin is not created |
 | `NVIDIA_API_KEY` | NVIDIA NIM API key for chatbot features | empty |
 | `NVIDIA_MODEL` | Chat model name | `meta/llama-3.1-8b-instruct` |
 | `NVIDIA_BASE_URL` | Chat completion endpoint | NVIDIA integrations endpoint |
@@ -29,7 +33,10 @@ Example PowerShell setup:
 $env:DB_USERNAME="root"
 $env:DB_PASSWORD="your-password"
 $env:JWT_SECRET="replace-with-a-long-random-secret-at-least-32-characters"
+$env:ADMIN_SEED_PASSWORD="replace-with-a-temporary-admin-password"
 ```
+
+If `ADMIN_SEED_PASSWORD` is empty, the backend will not create a new default admin account. Existing seeded admin users keep their admin role.
 
 ## Run Locally
 
@@ -62,4 +69,3 @@ OK
 cd backend
 mvn test
 ```
-

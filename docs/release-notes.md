@@ -14,6 +14,11 @@ Initial SMARTED AI Learning Platform milestone.
 - GitHub Actions CI for backend tests and frontend production builds.
 - Render backend blueprint, backend Dockerfile, Vercel SPA routing, and production environment examples.
 
+### Hardened
+
+- Seeded admin creation now requires an environment-provided password.
+- The frontend no longer displays default admin credentials.
+
 ### Verified
 
 - Backend Maven tests pass.

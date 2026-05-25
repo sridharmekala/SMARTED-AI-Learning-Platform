@@ -20,6 +20,11 @@ Use environment variables for local secrets. Do not commit real passwords, JWT s
 | `DB_USE_SSL` | Enables SSL in the generated JDBC URL | `false` |
 | `DB_USERNAME` | MySQL username | `root` |
 | `DB_PASSWORD` | MySQL password | empty |
+| `MYSQL_ADDON_HOST` | Clever Cloud MySQL host, preferred when set | empty |
+| `MYSQL_ADDON_PORT` | Clever Cloud MySQL port, preferred when set | empty |
+| `MYSQL_ADDON_DB` | Clever Cloud MySQL database name, preferred when set | empty |
+| `MYSQL_ADDON_USER` | Clever Cloud MySQL username, preferred when set | empty |
+| `MYSQL_ADDON_PASSWORD` | Clever Cloud MySQL password, preferred when set | empty |
 | `JWT_SECRET` | JWT signing secret | development placeholder |
 | `JWT_EXPIRATION_MS` | JWT expiry time in milliseconds | `86400000` |
 | `ADMIN_SEED_ENABLED` | Enables seeded admin creation | `true` |
@@ -39,7 +44,7 @@ $env:JWT_SECRET="replace-with-a-long-random-secret-at-least-32-characters"
 $env:ADMIN_SEED_PASSWORD="replace-with-a-temporary-admin-password"
 ```
 
-For cloud MySQL providers such as Clever Cloud, set `DB_HOST`, `DB_PORT`, `DB_NAME`, `DB_USERNAME`, and `DB_PASSWORD` in Render. If an old `DB_URL` variable exists in Render from a previous deploy attempt, remove it so these values are used.
+For Clever Cloud, you can paste the provided `MYSQL_ADDON_HOST`, `MYSQL_ADDON_PORT`, `MYSQL_ADDON_DB`, `MYSQL_ADDON_USER`, and `MYSQL_ADDON_PASSWORD` variables directly into Render. The backend prefers those values when present and falls back to the generic `DB_*` values otherwise. If an old `DB_URL` variable exists in Render from a previous deploy attempt, remove it.
 
 If `ADMIN_SEED_PASSWORD` is empty, the backend will not create a new default admin account. Existing seeded admin users keep their admin role.
 

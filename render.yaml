@@ -20,6 +20,16 @@ services:
         sync: false
       - key: DB_PASSWORD
         sync: false
+      - key: MYSQL_ADDON_HOST
+        sync: false
+      - key: MYSQL_ADDON_PORT
+        value: 3306
+      - key: MYSQL_ADDON_DB
+        sync: false
+      - key: MYSQL_ADDON_USER
+        sync: false
+      - key: MYSQL_ADDON_PASSWORD
+        sync: false
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRATION_MS

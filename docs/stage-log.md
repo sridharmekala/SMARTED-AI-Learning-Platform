@@ -133,3 +133,9 @@
 - Added support for `DB_HOST`, `DB_PORT`, `DB_NAME`, and `DB_USE_SSL` database environment variables.
 - Aligned backend datasource configuration with Clever Cloud-style Render environment variables.
 - Updated Render Blueprint and deployment documentation for cloud MySQL credentials.
+
+## Stage 21: Clever Cloud Add-on Variable Support
+
+- Added direct support for Clever Cloud `MYSQL_ADDON_*` environment variables.
+- Kept generic `DB_*` database variables as fallback values.
+- Updated Render Blueprint and deployment documentation for Clever Cloud add-on credentials.

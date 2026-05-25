@@ -139,3 +139,10 @@
 - Added direct support for Clever Cloud `MYSQL_ADDON_*` environment variables.
 - Kept generic `DB_*` database variables as fallback values.
 - Updated Render Blueprint and deployment documentation for Clever Cloud add-on credentials.
+
+## Stage 22: Live Deployment Links Added
+
+- Verified the Render backend health endpoint is live.
+- Verified the Vercel frontend is reachable.
+- Added live frontend, backend, and health-check URLs to project documentation.
+- Updated production frontend environment example and Render CORS blueprint value.

@@ -6,6 +6,12 @@ SMARTED can be deployed as a split full-stack application:
 - Backend: Render, Railway, Fly.io, or another Java 21 Spring Boot host.
 - Database: Managed MySQL, such as Railway MySQL, PlanetScale, Aiven, or AWS RDS.
 
+Current live deployment:
+
+- Frontend: https://smarted-ai-learning-platform.vercel.app/
+- Backend: https://smarted-ai-learning-platform.onrender.com
+- Health check: https://smarted-ai-learning-platform.onrender.com/health
+
 Stage 15 adds a Render Blueprint, backend Dockerfile, GitHub Actions CI, and frontend production environment example. See `docs/live-link-setup.md` for the final dashboard steps.
 
 ## Backend

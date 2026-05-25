@@ -61,6 +61,12 @@ The backend runs locally on:
 http://localhost:8081
 ```
 
+Live deployment:
+
+- Frontend: https://smarted-ai-learning-platform.vercel.app/
+- Backend: https://smarted-ai-learning-platform.onrender.com
+- Backend health: https://smarted-ai-learning-platform.onrender.com/health
+
 Documentation index:
 
 - API endpoints: `docs/api-endpoints.md`

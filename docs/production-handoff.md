@@ -1,6 +1,6 @@
 # Production Handoff
 
-This document summarizes what is ready for deployment and what still requires dashboard access.
+This document summarizes the live deployment and remaining dashboard maintenance tasks.
 
 ## Repository
 
@@ -14,6 +14,14 @@ Current milestone:
 v0.1.0 - Full-Stack MVP
 ```
 
+Live URLs:
+
+```text
+Frontend: https://smarted-ai-learning-platform.vercel.app/
+Backend: https://smarted-ai-learning-platform.onrender.com
+Backend health: https://smarted-ai-learning-platform.onrender.com/health
+```
+
 ## Ready
 
 - Backend source, configuration, and Dockerfile are committed.
@@ -23,11 +31,9 @@ v0.1.0 - Full-Stack MVP
 - Environment examples are available in `.env.example` and `frontend/.env.production.example`.
 - Documentation is available under `docs/`.
 
-## Required Dashboard Actions
+## Dashboard Maintenance
 
-1. Create or connect a managed MySQL database.
-2. Deploy the backend using Render Blueprint from `render.yaml`.
-3. Set backend secrets:
+Backend and frontend are deployed. Keep these backend secrets available in Render:
 
 ```bash
 DB_HOST=host
@@ -48,20 +54,19 @@ ADMIN_SEED_PASSWORD=temporary-admin-password
 
 Rotate or remove the seeded admin password after creating a permanent admin process.
 
-4. Deploy the frontend from the `frontend` root directory.
-5. Set frontend environment:
+Frontend environment:
 
 ```bash
-VITE_API_BASE_URL=https://your-backend-domain.onrender.com
+VITE_API_BASE_URL=https://smarted-ai-learning-platform.onrender.com
 ```
 
-6. Update backend CORS after the frontend URL is known:
+Backend CORS:
 
 ```bash
-CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app
+CORS_ALLOWED_ORIGIN_PATTERNS=https://smarted-ai-learning-platform.vercel.app
 ```
 
-7. Redeploy backend and verify `/health`.
+Redeploy backend after rotating secrets or changing CORS.
 
 ## Acceptance Checks
 

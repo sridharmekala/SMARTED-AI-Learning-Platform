@@ -64,6 +64,12 @@ CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app
 
 7. Redeploy the backend after changing CORS.
 
+Current production CORS value:
+
+```bash
+CORS_ALLOWED_ORIGIN_PATTERNS=https://smarted-ai-learning-platform.vercel.app
+```
+
 ## Final Verification
 
 - Backend `/health` returns `OK`.
@@ -74,9 +80,8 @@ CORS_ALLOWED_ORIGIN_PATTERNS=https://your-frontend-domain.vercel.app
 
 ## Live URLs
 
-Fill these after deployment:
-
 ```text
-Frontend: pending
-Backend: pending
+Frontend: https://smarted-ai-learning-platform.vercel.app/
+Backend: https://smarted-ai-learning-platform.onrender.com
+Backend health: https://smarted-ai-learning-platform.onrender.com/health
 ```
